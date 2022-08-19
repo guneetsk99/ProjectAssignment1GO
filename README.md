@@ -30,10 +30,10 @@
 >optional arguments:
 >  -h, --help            show this help message and exit
   
- > --train_data_csv TRAIN_DATA_CSV
+ > --train_data_csv 
                         Enter path of training data CSV
                         
- > --training_type TRAINING_TYPE
+ > --training_type 
                         Enter 0 for ML and 1 for DL
                         
   >--run_demo RUN_DEMO   Enter 1 to run Demo or any other number for training
