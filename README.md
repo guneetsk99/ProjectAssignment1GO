@@ -36,7 +36,7 @@
  > --training_type 
                         Enter 0 for ML and 1 for DL
                         
-  >--run_demo RUN_DEMO   Enter 1 to run Demo or any other number for training
+  >--run_demo   Enter 1 to run Demo or any other number for training
   
   
 `Step3`: To use pretarined weights and access the streamlit dashboard
