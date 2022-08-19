@@ -23,7 +23,9 @@
 ## Setup the project on your system
 `Step1`:  ```$ git clone https://github.com/guneetsk99/ProjectAssignment1GO.git```
 
-`Step2`: `$ python3 main.py --help `
+`Step2`:  ```$ pip install -r requirements.txt```
+
+`Step3`: `$ python3 main.py --help `
 >Emotion Based Text Classification
 >optional arguments:
   -h, --help            show this help message and exit
