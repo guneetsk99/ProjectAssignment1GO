@@ -7,8 +7,8 @@ import os
 import neattext.functions as nfx
 import pandas as pd
 
-from ml_train import mlTrain
-from PythonProject.deep_learning_train import lstm_train, lstm_preprocess
+from PythonProject.Training.ml_train import mlTrain
+from PythonProject.Training.deep_learning_train import lstm_train, lstm_preprocess
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Emotion Based Text Classification')

@@ -46,7 +46,7 @@ def lstm_preprocess(df):
 
     tokenizer = Tokenizer(num_words=application_properties.MAX_NB_WORDS, filters='!"#$%&()*+,-./:;<=>?@[\\]^_`{|}~')
     tokenizer.fit_on_texts(X_train.values)
-    with open('tokenizer.pickle', 'wb') as handle:
+    with open('../tokenizer.pickle', 'wb') as handle:
         pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)
     word_index = tokenizer.word_index
     print('Found %s unique tokens.' % len(word_index))
@@ -83,7 +83,7 @@ def lstm_train(X_train, X_test, Y_train, Y_test, input_length):
     print('Test set\n  Loss: {:0.3f}\n  Accuracy: {:0.3f}'.format(accr[0], accr[1]))
 
     model_json = model.to_json()
-    with open("model.json", "w") as json_file:
+    with open("../model.json", "w") as json_file:
         json_file.write(model_json)
     # serialize weights to HDF5
     model.save_weights("model.h5")

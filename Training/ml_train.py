@@ -22,6 +22,6 @@ def mlTrain(df):
     pipe_lr.fit(x_train, y_train)
     pipe_lr.score(x_test, y_test)
     import joblib
-    pipeline_file = open("emotion_classifier_pipe_lr", "wb")
+    pipeline_file = open("../emotion_classifier_pipe_lr", "wb")
     joblib.dump(pipe_lr, pipeline_file)
     pipeline_file.close()
