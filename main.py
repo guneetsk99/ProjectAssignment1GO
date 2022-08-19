@@ -7,8 +7,8 @@ import os
 import neattext.functions as nfx
 import pandas as pd
 
-from PythonProject.Training.ml_train import mlTrain
-from PythonProject.Training.deep_learning_train import lstm_train, lstm_preprocess
+from Training.ml_train import mlTrain
+from Training.deep_learning_train import lstm_train, lstm_preprocess
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Emotion Based Text Classification')
@@ -18,7 +18,7 @@ if __name__ == '__main__':
                                                                      "training")
     args = parser.parse_args()
     if args.run_demo == 1:
-        os.system("streamlit run /home/guneet.k/PycharmProjects/PythonAssignment1/APP/app.py")
+        os.system("streamlit run /home/guneet.k/PycharmProjects/PythonAssignment1/PythonProject/APP/app.py")
     else:
         df = pd.read_csv(args.train_data_csv)
         print("The Values Count of Emotions in Training Data", df['Emotion'].value_counts())

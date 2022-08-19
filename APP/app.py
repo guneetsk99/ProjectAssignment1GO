@@ -10,17 +10,17 @@ import joblib
 from keras.models import model_from_json
 from keras_preprocessing.sequence import pad_sequences
 
-json_file = open('/model.json', 'r')
+json_file = open('/home/guneet.k/PycharmProjects/PythonAssignment1/PythonProject/model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 loaded_model = model_from_json(loaded_model_json)
-loaded_model.load_weights("/home/guneet.k/PycharmProjects/PythonAssignment1/model.h5")
+loaded_model.load_weights("/home/guneet.k/PycharmProjects/PythonAssignment1/PythonProject/model.h5")
 loaded_model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-with open('/tokenizer.pickle', 'rb') as handle:
+with open('/home/guneet.k/PycharmProjects/PythonAssignment1/PythonProject/tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 # evaluate loaded model on test data
 
-pipe_lr = joblib.load(open("/emotion_classifier_pipe_lr", "rb"))
+pipe_lr = joblib.load(open("/home/guneet.k/PycharmProjects/PythonAssignment1/PythonProject/emotion_classifier_pipe_lr", "rb"))
 emotions_emoji_dict = {"anger": "😠", "disgust": "🤮", "fear": "😨😱", "happy": "🤗", "joy": "😂", "neutral": "😐", "sad": "😔",
                        "sadness": "😔", "shame": "😳", "surprise": "😮"}
 

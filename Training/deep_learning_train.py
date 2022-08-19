@@ -12,7 +12,7 @@ from keras_preprocessing.sequence import pad_sequences
 from keras_preprocessing.text import Tokenizer
 from sklearn.model_selection import train_test_split
 
-from PythonProject.properties import application_properties
+from Training import application_properties
 
 labels = {'neutral': 0,
           'joy': 1,

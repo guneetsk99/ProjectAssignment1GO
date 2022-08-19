@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
-from PythonProject.properties import application_properties
+from Training import application_properties
 
 
 def mlTrain(df):
